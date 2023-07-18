@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*HEADER*/
+header {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, black, #9400D3);
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+    box-shadow: 0 2.5px 3px rgba(0, 0, 0, 0.8);
+}
+
+img.logo {
+    width: 5rem;
+}
+
+nav {
+    display: flex;
+}
+
+nav li {
+    list-style: none;
+    margin: 0 1rem;
+    padding: 1.5rem;
+    position: relative;
+    /* Agregamos posición relativa para el menú desplegable */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: grey;
+    transition: 0.5s ease-out;
+    -webkit-transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    -ms-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out;
+}
+
+/*MAIN*/
+
+main {
+    margin-top: 5%;
+}
+
+h2 {
+    margin-top: 5vh;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+section.equipos {
+    display: flex;
+    /* Cambiar width a 100% en lugar de 100vw */
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+}
+
+.image-container {
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+    /* Ajustar el ancho para que las imágenes no se desplacen hacia la derecha */
+    width: 25%;
+}
+
+li {
+    list-style: none;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+}
+
+.image-container:hover img {
+    cursor: pointer;
+    width: 110%;
+    /* Aumenta el tamaño al 110% en el hover */
+    height: 110%;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 25px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 50%;
+}
+
+ul {
+    padding: 0;
+}
+
+.image-container:hover .overlay-text {
+    opacity: 1;
+}
+
+section.contacto {
+    margin: 1vw 0 1vw 0;
+    background-image: linear-gradient(to right, black, #9400D3);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem ;
+}
+
+.news-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las noticias */
+    margin: 2rem 0;
+  }
+  
+  .news-card {
+    width: 300px; /* Tamaño deseado de cada artículo */
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .news-card img {
+    width: 100%;
+    height: 200px; /* Altura deseada para la imagen */
+    object-fit: cover; /* Ajusta la imagen para llenar el espacio */
+    border-radius: 6px;
+  }
+  
+  .news-card h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .news-card p {
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .news-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #9400D3; /* Color de enlace */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .news-card a:hover {
+    color: #800080; /* Color de enlace al hacer hover */
+  }
+
+/*FOOTER*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, black, #9400D3);
+    color: white;
+    font-weight: 300;
+    align-items: center;
+    padding: 0 20vw;
+    padding-top: 2rem;
+}
+
+footer div section li {
+    list-style: none;
+    margin: 0.5rem 0;
+}
+
+footer a:hover,
+footer h4:hover {
+    color: grey;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+footer div {
+    display: flex;
+}
+
+footer div section h4 {
+    margin-bottom: 1rem;
+}
+
+footer div section {
+    margin: 0 2rem 2rem;
+}
+
+footer span i:hover{
+    color: red;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
